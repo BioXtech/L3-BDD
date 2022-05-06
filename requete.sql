@@ -27,13 +27,6 @@ WHERE
 	
 -- ===== (3) ===== --
 
-SELECT C.LAST_NAME, COUNT(C.CONTENT) AS "NB RENTINGS", ST.SUBSCRIPTION_NAME
-FROM CUSTOMER C
-JOIN SUBSCRIPTION S   		ON S.CUSTOMER_ID = C.CUSTOMER_ID
-JOIN Document D             ON D.ID = DB.DocumentID
-JOIN Document_Author DA     ON DA.DocumentID = D.ID
-JOIN SUBSCRIPTION_TYPES ST               ON A.ID = DA.AuthorID
-ORDER BY B.name;
 
 -- ===== (4) ===== --
 
